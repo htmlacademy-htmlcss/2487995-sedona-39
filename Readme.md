@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Константин Поляков](https://up.htmlacademy.ru/htmlcss/39/user/2487995).
-* Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
+* Наставник: [Андрей Изосимов](https://htmlacademy.ru/profile/id605037).
 * Сайт: [Мой проект](https://kostyanus98.github.io/Polyakov-sedona-39/)
 
 ---
