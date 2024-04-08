@@ -819,10 +819,28 @@ body {
 }
 
 .hotel-card-title {
-  display: grid;
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  color: #000000;
+}
+
+.hotel-price-name{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+}
+
+.hotel-price-value{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #333333;
+  text-align: right;
 }
 
 .hotel-card-link {
