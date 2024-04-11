@@ -418,7 +418,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -741,6 +741,8 @@ body {
   align-items: center;
   margin: 0 0 40px;
   gap: 70px;
+  width: 1060px;
+  height: 49px;
 }
 
 /* .sorting-container .menu-view-item {
@@ -753,15 +755,16 @@ body {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 120%;
   text-align: left;
   text-transform: uppercase;
 }
 
 .select-control {
-  padding: 12px 20px;
+  padding: 14px 20px;
   margin: 0;
   width: 292px;
+  height: 49px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -810,7 +813,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: start;
   row-gap: 16px;
   column-gap: 20px;
   padding: 19px;

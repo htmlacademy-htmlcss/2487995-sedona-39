@@ -35,7 +35,7 @@
           </li>
           <li class="menu-item">
             <a class="menu-link" href="#">
-              <span class="visually-hidden">Лайки</span>
+              <span class="visually-hidden">Посмотреть избранное</span>
               <span class="visually-hidden">12</span>
             </a>
           </li>
@@ -80,21 +80,21 @@
               <legend class="filter-title">Тип жилья:</legend>
               <ul class="filter-list">
                 <li class="filter-list-item">
-                  <label class="filter-form-control" for="hotel">
+                  <label class="filter-form-control">
                     <input class="filter-form-input" type="radio" name="type-housing" value="hotel" id="hotel"
                       checked>Гостиница
                     <span class="marker"></span>
                   </label>
                 </li>
                 <li class="filter-list-item">
-                  <label class="filter-form-control" for="motel">
+                  <label class="filter-form-control">
                     <input class="filter-form-input" type="radio" name="type-housing" value="motel" id="motel">
                     Мотель
                     <span class="marker"></span>
                   </label>
                 </li>
                 <li class="filter-list-item">
-                  <label class="filter-form-control" for="apartments">
+                  <label class="filter-form-control">
                     <input class="filter-form-input" type="radio" name="type-housing" value="apartments"
                       id="apartments">
                     Апартаменты
@@ -112,7 +112,7 @@
                     aria-label="Укажите минимальную стоимость">
                 </label>
                 <label class="range-price-conrol" for="max-price">
-                  <input class="range-price-input" type="number" name="max-price" id="max-price value=" 0" max="9999"
+                  <input class="range-price-input" type="number" name="max-price" id="max-price value=" 9000" max="9999"
                     aria-label="Укажите максимальную стоимость">
                 </label>
               </div>
@@ -172,13 +172,13 @@
             <a class="hotel-item-link-heading" href="#">
               <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             </a>
-
             <p class="hotel-price-name">Гостиница</p>
             <p class="hotel-price-value">От 4000 ₽</p>
-
             <a class="hotel-item-link" href="#">Подробнее</a>
             <button class="hotel-item-button" type="button">В избранное</button>
+            <p class="star star-4">
             <span class="visually-hidden">Четыре звезды</span>
+            </p>
             <p class="hotel-item-rating" href="#">Рейтинг: 8,5</p>
           </li>
 
@@ -190,13 +190,13 @@
             <a class="hotel-item-link-heading" href="#">
               <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             </a>
-
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 5000 ₽</p>
-
               <a class="hotel-item-link" href="#">Подробнее</a>
             <button class="hotel-item-button card-item-button-selected" type="button">В избранное</button>
-            <span class="visually-hidden">Четыре звезды</span>
+            <p class="star star-4">
+              <span class="visually-hidden">Четыре звезды</span>
+              </p>
             <p class="hotel-item-rating" href="#">Рейтинг: 9,2</p>
           </li>
 
@@ -208,13 +208,13 @@
             <a class="hotel-item-link-heading" href="#">
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
-
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 2500 ₽</p>
-
               <a class="hotel-item-link" href="#">Подробнее</a>
             <button class="hotel-item-button" type="button">В избранное</button>
-            <span class="visually-hidden">Три звезды</span>
+            <p class="star star-3">
+              <span class="visually-hidden">Три звезды</span>
+              </p>
             <p class="hotel-item-rating" href="#">Рейтинг: 6,9</p>
           </li>
 
@@ -226,19 +226,19 @@
             <a class="hotel-item-link-heading" href="#">
               <h3 class="hotel-card-title">GreenTree Inn</h3>
             </a>
-
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 1500 ₽</p>
-
               <a class="hotel-item-link" href="#">Подробнее</a>
             <button class="hotel-item-button" type="button">В избранное</button>
-            <span class="visually-hidden">Две звезды</span>
+            <p class="star star-2">
+              <span class="visually-hidden">Две звезды</span>
+              </p>
             <p class="hotel-item-rating" href="#">Рейтинг: 5,0</p>
           </li>
         </ul>
 
         <!-- Пагинация -->
-        <ul class="pagination">
+        <ol class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-link-current">1</a>
           </li>
@@ -257,7 +257,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
           </li>
-        </ul>
+        </ol>
         </section>
 
         <!-- Блок подписки -->
