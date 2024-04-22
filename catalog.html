@@ -23,7 +23,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link--current">Гостиницы</a>
           </li>
         </ul>
 
@@ -38,8 +38,8 @@
           </li>
           <li class="menu-item">
             <a class="menu-link" href="#">
-              <svg aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" fill="black" />
+              <svg aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6 0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18 5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4 11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6 2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5 2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z" fill="currentColor" />
               </svg>
               <span class="counter-favorites">12</span>
             </a>
@@ -55,7 +55,7 @@
           <h1 class="filter-main-title">Гостиницы Седоны</h1>
           <ol class="filter-breadcrumbs">
             <li class="filter-breadcrumbs-item">
-              <a class="filter-breadcrumbs-link" href="catalog.html" aria-label="Главная страница.">
+              <a class="filter-breadcrumbs-link" href="index.html" aria-label="Главная страница.">
                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="white" />
                   <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white" />
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li class="filter-breadcrumbs-item">
-              <a href="#" class="filter-breadcrumbs-link" aria-label="Страница гостиниц.">Гостиницы</a>
+              <a class="filter-breadcrumbs-link" aria-label="Страница гостиниц.">Гостиницы</a>
             </li>
           </ol>
 
@@ -73,18 +73,18 @@
               <legend class="filter-title">Инфраструктура:</legend>
               <ul class="filter-list">
                 <li class="filter-list-item">
-                  <label class="extras-input">
-                    <input class="control-input" type="checkbox" name="swimming-pool"
-                      checked>Бассейн</label>
+                  <label class="filter-form-control">
+                    <input class="filter-form-input" type="checkbox" name="swimming-pool"
+                      checked> Бассейн </label>
                 </li>
                 <li class="filter-list-item">
-                  <label class="extras-input">
-                    <input class="control-input" type="checkbox" name="parking"
-                      checked>Парковка</label>
+                  <label class="filter-form-control">
+                    <input class="filter-form-input" type="checkbox" name="parking"
+                      checked> Парковка </label>
                 </li>
                 <li class="filter-list-item">
-                  <label class="extras-input">
-                  <input class="control-input" type="checkbox" name="wifi">Wi-Fi</label>
+                  <label class="filter-form-control">
+                  <input class="filter-form-input" type="checkbox" name="wifi"> Wi-Fi </label>
                 </li>
               </ul>
             </fieldset>
@@ -95,20 +95,20 @@
                 <li class="filter-list-item">
                   <label class="filter-form-control">
                     <input class="filter-form-input" type="radio" name="type-housing" value="hotel" id="hotel"
-                      checked>Гостиница
+                      checked> Гостиница
                     <span class="marker"></span>
                   </label>
                 </li>
                 <li class="filter-list-item">
                   <label class="filter-form-control">
-                    <input class="filter-form-input" type="radio" name="type-housing" value="motel" id="motel">Мотель
+                    <input class="filter-form-input" type="radio" name="type-housing" value="motel" id="motel"> Мотель
                     <span class="marker"></span>
                   </label>
                 </li>
                 <li class="filter-list-item">
                   <label class="filter-form-control">
                     <input class="filter-form-input" type="radio" name="type-housing" value="apartments"
-                      id="apartments">Апартаменты
+                      id="apartments"> Апартаменты
                     <span class="marker"></span>
                   </label>
                 </li>
@@ -119,14 +119,17 @@
               <legend class="filter-title">Стоимость, ₽:</legend>
               <div class="range-price">
                   <label class="range-price-control" for="min-price">
+                    <span class="range-price--borders">от</span>
                       <input class="range-price-input" type="number" name="min-price" id="min-price" value="0" min="0" aria-label="Укажите минимальную стоимость">
                   </label>
                   <label class="range-price-control" for="max-price">
+                    <span class="range-price--borders">до</span>
                       <input class="range-price-input" type="number" name="max-price" id="max-price" value="9000" max="9999" aria-label="Укажите максимальную стоимость">
                   </label>
               </div>
 
               <div class="range-price-bar">
+                  <span class="active-line"></span>
                   <button class="range-price-toggle toggle-min" type="button" aria-label="Минимальный ценовой предел">
                   </button>
                   <button class="range-price-toggle toggle-max" type="button" aria-label="Максимальный ценовой предел">
@@ -157,7 +160,7 @@
 
           <ul class="menu-view-list">
             <li class="menu-view-item">
-              <a class="menu-view-link menu-view-link-selected" href="#" aria-label="Отображать карточками гостиниц.">
+              <button class="menu-view-link menu-view-link-selected" href="#" aria-label="Отображать карточками гостиниц.">
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 0H0V6H4V0Z" fill="black" />
                   <path d="M16 0H12V6H16V0Z" fill="black" />
@@ -166,20 +169,20 @@
                   <path d="M16 8H12V14H16V8Z" fill="black" />
                   <path d="M10 8H6V14H10V8Z" fill="black" />
                 </svg>
-              </a>
+              </button>
             </li>
 
             <li class="menu-view-item">
-              <a class="menu-view-link" href="#" aria-label="Отображать по одной гостинице.">
+              <button class="menu-view-link" href="#" aria-label="Отображать по одной гостинице.">
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 12H0V14H16V12Z" fill="black" />
                   <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
                 </svg>
-              </a>
+              </button>
             </li>
 
             <li class="menu-view-item">
-              <a class="menu-view-link" href="#" aria-label="Отображать списком гостиниц.">
+              <button class="menu-view-link" href="#" aria-label="Отображать списком гостиниц.">
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 0H0V2H2V0Z" fill="black" />
                   <path d="M16 0H4V2H16V0Z" fill="black" />
@@ -190,7 +193,7 @@
                   <path d="M2 12H0V14H2V12Z" fill="black" />
                   <path d="M16 12H4V14H16V12Z" fill="black" />
                 </svg>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -337,8 +340,9 @@
           </a>
         </li>
       </ul>
-      <a class="page-phone" href="tel:+78128121212" aria-label="Телефон 7 812 812 12 12">+7 (812) 812-12-12</a>
-      <a class="logo" href="https://htmlacademy.ru/" aria-label="HTML Academy">
+       <section class="phones">
+        <a class="page-phone" href="tel:+78128121212" aria-label="Телефон 7 812 812 12 12">+7 (812) 812-12-12</a>
+       </section>      <a class="logo" href="https://htmlacademy.ru/" aria-label="HTML Academy">
         <svg width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black" />
           <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z" fill="black" />

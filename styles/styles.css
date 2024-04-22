@@ -25,6 +25,10 @@
   overflow: hidden;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 ul {
   list-style-type: none;
 }
@@ -69,7 +73,7 @@ body {
 
 .button-brown {
   align-self: center;
-  min-width: 160px;
+  /* min-width: 160px; */
   padding: 8px 34px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
@@ -189,12 +193,12 @@ body {
   transition: all 0.5s;
 }
 
-.navigation-link:hover {
+.navigation-link:not(.navigation-link--current):hover {
   color: #68A2CA;
   transition: all 0.5s;
 }
 
-.navigation-link-current::after {
+.navigation-link--current::after {
   position: absolute;
   content: "";
   bottom: -1px;
@@ -235,11 +239,6 @@ body {
   transition: all 0.5s;
 }
 
-.navigation-link:hover {
-  color: #68A2CA;
-  transition: all 0.5s;
-}
-
 .counter-favorites {
   position: absolute;
   top: 11px;
@@ -271,7 +270,7 @@ body {
   padding-top: 51px;
   padding-bottom: 82px;
   background-color: #769ec2;
-  background-image: url("../images/divider.png"), url("../images/index-background.jpg");
+  background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0 center, center center;
   background-size: contain, cover;
@@ -313,7 +312,7 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
+
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -367,7 +366,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+
   gap: 60px;
   width: 400px;
   min-height: 385px;
@@ -399,7 +398,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
+
   gap: 60px;
   width: 400px;
   padding: 85px;
@@ -462,8 +461,8 @@ body {
   text-transform: uppercase;
   margin: 0;
   position: relative;
-  padding: 30px;
-  margin-top: 75px;
+  /* padding: 30px;
+  margin-top: 75px; */
 }
 
 .conveniences-description {
@@ -473,6 +472,7 @@ body {
   line-height: 21px;
   color: #333333;
   text-transform: none;
+  padding-top: 30px;
 }
 
 .conveniences-container {
@@ -510,7 +510,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-top: 0;
+  padding-top: 180px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -522,7 +522,7 @@ body {
 
 .conveniences-item-cube {
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 385px;
   align-items: center;
   text-align: center;
@@ -548,8 +548,8 @@ body {
 
 /* Блок: поиск гостиницы */
 .hotels-search {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   padding: 96px 304px;
   text-align: center;
 }
@@ -589,8 +589,8 @@ body {
 
 /* Блок: подписка */
 .subscription {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   padding: 96px 258px 105px;
   color: #ffffff;
   background-color: #68a3ca;
@@ -715,6 +715,15 @@ body {
   text-decoration: none;
 }
 
+.marker {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  outline: 3px solid transparent;
+  flex-shrink: 0;
+}
+
 .filter-form {
   display: grid;
   grid-template-columns: 220px 220px auto auto;
@@ -727,8 +736,33 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  color: #ffffff;
+  /* color: #ffffff; */
   text-transform: capitalize;
+}
+
+.filter-form-control {
+  gap: 16px;
+  cursor: pointer;
+}
+
+.filter-form-control:has(:disabled) {
+  opacity: 0.6;
+}
+
+.filter-form-input:focus-visible ~ .marker {
+  outline: 3px solid #83b3d3;
+}
+
+.filter-form-control:has(.filter-form-input:active) {
+  opacity: 0.3;
+}
+
+.filter-form-control:hover {
+  opacity: 0.6;
+}
+
+.filter-form-control:active {
+  opacity: 0.3;
 }
 
 .filter-list{
@@ -760,6 +794,16 @@ body {
   border: none;
 }
 
+.range-price--borders{
+  position: absolute;
+  z-index: 1;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .range-price {
   display: flex;
   gap: 2px;
@@ -773,7 +817,6 @@ body {
 .range-price-input {
   width: 143px;
   padding: 12px 43px 12px 20px;
-  box-sizing: border-box;
   background-color: #f2f2f2;
   font-size: 18px;
   font-weight: 700;
@@ -783,6 +826,29 @@ body {
   outline: none;
   appearance: none;
   -moz-appearance: textfield;
+}
+
+.range-price-input::-webkit-inner-spin-button,
+.range-price-input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.range-price-input:hover {
+  background-color: #e6e6e6;
+}
+
+.range-price-input:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.range-price-input[name="min-price"] {
+  border-radius: 5px 0 0 5px;
+}
+
+.range-price-input[name="max-price"] {
+  border-radius: 0 5px 5px 0;
 }
 
 .range-price-bar {
@@ -808,10 +874,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-self: end;
+  align-self: center;
   padding: 56px 0 0;
   row-gap: 32px;
-  grid-column: -2/-1;
-  grid-row: 1/-1;
+  /* grid-column: -2/-1;
+  grid-row: 1/-1; */
 }
 
 .filter-form-button[type="submit"] {
@@ -891,7 +958,7 @@ body {
   margin: 0 0 40px;
   gap: 70px;
   width: 1060px;
-  height: 49px;
+  /* height: 49px; */
 }
 
 /* .sorting-container .menu-view-item {
@@ -907,13 +974,13 @@ body {
   line-height: 120%;
   text-align: left;
   text-transform: uppercase;
+  flex-basis: 350px;
 }
 
 .select-control {
   padding: 14px 20px;
-  margin: 0;
+  margin: 0 0 0 auto;
   width: 292px;
-  height: 49px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -935,6 +1002,8 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  flex-basis: 150px;
+  flex-wrap: wrap;
 }
 
 .menu-view-link {
@@ -946,6 +1015,16 @@ body {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   outline: none;
+  background-color: transparent; /* Установка прозрачного фона */
+  color: inherit; /* Наследование цвета текста */
+  padding: 0; /* Удаление стандартных отступов */
+  cursor: pointer; /* Добавление указателя в виде руки для интерактивности */
+  font: inherit; /* Наследование шрифта от родительского элемента */
+  text-align: center; /* Центрирование текста */
+}
+
+.menu-view-link-selected {
+  border: 2px solid #000000;
 }
 
 .product-list {
@@ -959,10 +1038,10 @@ body {
 }
 
 .hotel-card{
-  box-sizing: border-box;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: start;
+  /* align-items: start; */
   row-gap: 16px;
   column-gap: 20px;
   padding: 19px;
@@ -1128,7 +1207,7 @@ body {
 }
 
 .pagination-link {
-  box-sizing: border-box;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1200,6 +1279,10 @@ body {
   outline: none;
 }
 
+.phones{
+  max-width: 350px;
+}
+
 .page-phone {
   padding: 5px 5px;
   font-size: 40px;
@@ -1219,4 +1302,11 @@ body {
   text-decoration: none;
   background-color: #ffffff;
   outline: none;
+}
+
+.active-line{
+  display: block;
+  width: 180px;
+  height: 2px;
+  background-color: #ffffff;
 }
