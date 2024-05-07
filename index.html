@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   </head>
 
   <body>
@@ -15,7 +17,7 @@
           <img class="navigation-logo-img" src="images/sedona-logo.svg" width="140" height="70"
             alt="Логотип Города Седона">
         </a>
-        <ul class="navigation-list">
+        <ul class="navigation-list no-list-style">
           <li class="navigation-item">
             <a class="navigation-link navigation-link--current">Главная</a>
           </li>
@@ -27,7 +29,7 @@
           </li>
         </ul>
 
-        <ul class="menu-list">
+        <ul class="menu-list no-list-style">
           <li class="menu-item">
             <a class="menu-link" href="#">
               <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
@@ -49,24 +51,23 @@
           </li>
         </ul>
       </nav>
-      <a class="button button-brown" href="modal.html">Хочу сюда!</a>
+      <button class="button button-brown" type="button">Хочу сюда!</button>
     </header>
 
     <main class="main-container main-index" data-test="main">
-      <!-- <div class="page-conteiner"> -->
       <section class="hero" data-test="hero">
-        <!-- <section class="background-image-container"> -->
+        <h2 class="visually-hidden">Приветственный раздел</h2>
         <img class="hero-img" src="images/welcome-to-sedona.svg" width="458" height="352"
           alt="Добро пожаловать в Седону!">
-        <!-- </section> -->
       </section>
 
       <!-- Блок: преимущества -->
       <section class="advantages" data-test="advantages">
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
         <p class="hero-main-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="hero-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
-        <ul class="advantages-list">
+        <ul class="advantages-list no-list-style">
           <li class="advantages-item blue advantages-item-image advantages-item-image-right">
             <div class="advantages-item__inner">
               <h3 class="advantages-title blue">Настоящий<br>городок</h3>
@@ -104,10 +105,11 @@
 
       <!-- Блок: удобства -->
       <section class="conveniences">
+        <h2 class="visually-hidden">Удобства Седоны</h2>
         <p class="conveniences-main-text">Приезжайте в Седону отдохнуть<br>в комфорте и уюте!</p>
         <p class="conveniences-text">Опытный персонал и качественное обслуживание!</p>
 
-        <ul class="conveniences-container">
+        <ul class="conveniences-container no-list-style">
           <li class="conveniences-item conveniences-item-cube conveniences-item-hotel lightgray">
             <h3 class="conveniences-title">Жильё</h3>
             <p class="conveniences-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
@@ -121,7 +123,7 @@
 
           <li class="conveniences-item conveniences-item-cube conveniences-item-souvenir lightgray">
             <h3 class="conveniences-title">Сувениры</h3>
-            <p class="conveniences-description">Не только китайского,<br>но и настоящего местного<br>производства!!</p>
+            <p class="conveniences-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
           </li>
         </ul>
       </section>
@@ -138,15 +140,16 @@
         <p class="subscription-text">Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="user-email" class="visually-hidden">Ваш e-mail</label>
           <input class="email-field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail" required>
           <button class="button button-blue button-big" type="submit">Подписаться</button>
         </form>
       </section>
-      <!-- </div> -->
+
     </main>
     <!-- Футер -->
     <footer class="main-footer" data-test="footer">
-      <ul class="page-footer-container">
+      <ul class="page-footer-container no-list-style">
         <li class="social-list">
           <a class="social-link" href="https://vk.com/htmlacademy" aria-label="Группа ВКонтакте.">
             <svg aria-hidden="true" focusable="false" width="25" height="15" viewBox="0 0 25 15" fill="currentColor"
@@ -178,9 +181,10 @@
           </a>
         </li>
       </ul>
-      <section class="phones">
+      <div class="phones">
+        <h2 class="visually-hidden">Телефон</h2>
         <a class="page-phone" href="tel:+78128121212" aria-label="Телефон 7 812 812 12 12">+7 (812) 812-12-12</a>
-      </section>
+      </div>
       <a class="logo-academy" href="https://htmlacademy.ru/" aria-label="HTML Academy">
         <svg width="115" height="34" viewBox="0 0 115 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="currentColor" />
@@ -223,78 +227,68 @@
 
     <!-- Модельное окно -->
 
-    <div class="modal-container" data-test="modal">
-      <div class="modal modal-search">
-        <button class="button modal-close-button" type="button">
-          <span class="visually-hidden">Закрыть</span>
+    <section class="modal-container">
+      <div class="modal">
+        <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
+        <button class="modal-button-close" type="button" aria-label="Закртыть окно поиска гостиницы.">
+          <svg aria-hidden="true" focusable="false" class="modal-button-close-svg" xmlns="http://www.w3.org/2000/svg"
+            width="14" height="14" fill="currentColor" viewBox="0 0 14 14" role="img"
+            aria-label="Закртыть окно поиска гостиницы.">
+            <path fill="currentColor"
+              d="M14 1.292 12.708 0 7 5.708 1.292 0 0 1.292 5.708 7 0 12.708 1.292 14 7 8.292 12.708 14 14 12.708 8.292 7 14 1.292Z" />
+          </svg>
         </button>
-        <section class="modal-content">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="modal-input-check-in" class="modal-label modal-label-check-in">Дата Заезда:</label>
-            <input type="date" class="modal-input modal-input-check-in" id="modal-input-check-in"
-              name="modal-input-check-in" value="2020-04-27" required>
-            <span class="modal-input-warning">Мы не можем отправить вас в прошлое.</span>
-            <label for="modal-input-depart" class="modal-label modal-label-depart">Дата Выезда:</label>
-            <input type="date" class="modal-input modal-input-depart" id="modal-input-depart" name="modal-input-depart"
-              value="2023-09-01" required>
-            <span class="modal-input-info">На эти даты есть свободные номера. Пока есть.</span>
-            <label for="input-control-adults" class="modal-label label-control-adults">Взрослые:</label>
-            <div class="input-control-wrapper">
-              <button class="button-counter button-adults-minus" type="button">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Уменьшить количество взрослых." width="20" height="20" fill="#756157" viewBox="0 0 20 20">
-                  <path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z" />
-                </svg>
-              </button>
-              <input type="text" class="input-control input-control-adults" name="input-control-adults"
-                id="input-control-adults" value="2" required>
-              <button class="button-counter button-adults-pluse" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                  aria-label="Увеличить количество взрослых." width="20" height="20" fill="#756157" viewBox="0 0 20 20">
-                  <path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
-                </svg>
-              </button>
-            </div>
-            <span class="modal-label">
-              <label for="input-control-child" class="modal-label label-control-child">Дети:</label>
-              <span class="tooltip">
-                <button class="tooltip-info" type="button" aria-labelledby="tooltip-label-date">
-                  <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                    aria-label="Показать дополнительную информацию." width="26" height="26" fill="none"
-                    viewBox="0 0 26 26">
-                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                    <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
-                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
-                  лет. Дети до 6 лет размещаются бесплатно.
-                </span>
-              </span>
+        <form class="modal-form" method="get">
+          <input class="check-in-date-input" type="date" name="check-in-date" id="check-in-date" value="2023-04-27"
+            aria-label="Укажите дату заезда.">
+          <label class="check-in-date-control" for="check-in-date">Дата заезда:</label>
+          <p class="check-in-date-text">Мы не можем отправить вас в прошлое.</p>
+          <input class="check-out-date-input" type="date" name="check-out-date" id="check-out-date" value="2024-05-01"
+            aria-label="Укажите дату выезда.">
+          <label class="check-out-date-control" for="check-out-date">Дата выезда:</label>
+          <p class="check-out-date-text">На эти даты есть свободные номера. Пока есть.</p>
+          <label class="adults-control" for="adults">Взрослые:</label>
+          <div class="adults-control-wrapper">
+            <button class="modal-control-button" type="button" aria-label="Уменьшить количество взрослых.">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="currentColor" viewBox="0 0 20 20" role="img" aria-label="Уменьшить количество взрослых.">
+                <path fill="currentColor" d="M3 9v2h14V9H3Z" />
+              </svg>
+            </button>
+            <input class="modal-control-input" type="number" name="adults" id="adults" value="2"
+              aria-label="Укажите количество взрослых.">
+            <button class="modal-control-button" type="button" aria-label="Увеличить количество взрослых.">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="currentColor" viewBox="0 0 20 20" role="img" aria-label="Увеличить количество взрослых.">
+                <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+            </button>
+          </div>
+          <label class="children-control" for="children">Дети:
+            <span class="children-control-button" tabindex="0">i
+              <span class="children-control-info">Укажите количество детей, которые будут с вами, возраст которых от 6
+                до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
             </span>
-            <div class="input-control-wrapper">
-              <button class="button-counter button-child-minus" type="button">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Уменьшить количество детей." width="20" height="20" fill="none" viewBox="0 0 20 20">
-                  <path fill="#756157" fill-opacity=".3" d=" M3 9v2h14V9H3Z" />
-                </svg>
-              </button>
-              <input type="text" class="input-control input-control-child" name="input-control-child"
-                id="input-control-child" value="2" required>
-              <button class="button-counter button-child-pluse" type="button">
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Увеличить количество детей." width="20" height="20" fill="none" viewBox="0 0 20 20">
-                  <path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
-                </svg>
-              </button>
-            </div>
-            <button class="button button-modal-find" type="submit">Найти</button>
-          </form>
-        </section>
+          </label>
+          <div class="children-control-wrapper">
+            <button class="modal-control-button" type="button" aria-label="Уменьшить количество детей.">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="none" viewBox="0 0 20 20" role="img" aria-label="Уменьшить количество детей.">
+                <path fill="currentColor" d="M3 9v2h14V9H3Z" />
+              </svg>
+            </button>
+            <input class="modal-control-input" type="number" name="children" id="children" value="2"
+              aria-label="Укажите количество детей.">
+            <button class="modal-control-button" type="button" aria-label="Увеличить количество детей.">
+              <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="none" viewBox="0 0 20 20" role="img" aria-label="Увеличить количество детей.">
+                <path fill="currentColor" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+            </button>
+          </div>
+          <button class="modal-form-submit" type="submit" aria-label="Выпонить поиск гостиницы.">Найти</button>
+        </form>
       </div>
-    </div>
-
+    </section>
   </body>
-
 </html>
