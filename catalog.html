@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   </head>
 
   <body>
@@ -50,10 +52,11 @@
           </li>
         </ul>
       </nav>
-      <a class="button button-brown" href="modal.html">Хочу сюда!</a>
+      <button class="button button-brown" type="button">Хочу сюда!</button>
     </header>
 
     <main class="main-inner main-container" data-test="main">
+      <h1 class="visually-hidden">Гостиницы Седоны</h1>
       <div class="page-container">
         <section class="filter" data-test="filter">
           <h1 class="filter-main-title">Гостиницы Седоны</h1>
@@ -134,12 +137,12 @@
                 <label class="range-price-control" for="min-price">
                   <span class="range-price--borders">от</span>
                   <input class="range-price-input" type="number" name="min-price" id="min-price" value="0" min="0"
-                    aria-label="Укажите минимальную стоимость">
+                    aria-label="Укажите минимальную стоимость" disabled>
                 </label>
                 <label class="range-price-control" for="max-price">
                   <span class="range-price--borders">до</span>
                   <input class="range-price-input" type="number" name="max-price" id="max-price" value="9000" max="9999"
-                    aria-label="Укажите максимальную стоимость">
+                    aria-label="Укажите максимальную стоимость" disabled>
                 </label>
               </div>
 
@@ -163,6 +166,7 @@
 
         <!-- Каталог гостиниц -->
         <section class="catalog-cards" data-test="catalog">
+          <h2 class="visually-hidden">Каталог</h2>
           <div class="sorting-container">
             <p class="search-result-text">Найдено гостиниц:
               <span>38</span>
@@ -175,7 +179,7 @@
 
             <ul class="menu-view-list">
               <li class="menu-view-item">
-                <button class="menu-view-link menu-view-link-selected" href="#"
+                <button class="menu-view-link menu-view-link-selected" type="button"
                   aria-label="Отображать карточками гостиниц.">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 0H0V6H4V0Z" fill="black" />
@@ -189,7 +193,7 @@
               </li>
 
               <li class="menu-view-item">
-                <button class="menu-view-link" href="#" aria-label="Отображать по одной гостинице.">
+                <button class="menu-view-link" type="button" aria-label="Отображать по одной гостинице.">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 12H0V14H16V12Z" fill="black" />
                     <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
@@ -198,7 +202,7 @@
               </li>
 
               <li class="menu-view-item">
-                <button class="menu-view-link" href="#" aria-label="Отображать списком гостиниц.">
+                <button class="menu-view-link" type="button" aria-label="Отображать списком гостиниц.">
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 0H0V2H2V0Z" fill="black" />
                     <path d="M16 0H4V2H16V0Z" fill="black" />
@@ -223,7 +227,7 @@
                   alt="Amara Resort & Spa">
               </a>
               <a class="hotel-item-link-heading" href="#">
-                <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+                <h2 class="hotel-card-title">Amara Resort & Spa</h2>
               </a>
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 4000 ₽</p>
@@ -241,7 +245,7 @@
                   alt="Villas at Poco Diablo">
               </a>
               <a class="hotel-item-link-heading" href="#">
-                <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+                <h2 class="hotel-card-title">Villas at Poco Diablo</h2>
               </a>
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 5000 ₽</p>
@@ -259,7 +263,7 @@
                   alt="Desert Quail Inn">
               </a>
               <a class="hotel-item-link-heading" href="#">
-                <h3 class="hotel-card-title">Desert Quail Inn</h3>
+                <h2 class="hotel-card-title">Desert Quail Inn</h2>
               </a>
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 2500 ₽</p>
@@ -277,7 +281,7 @@
                   alt="GreenTree Inn">
               </a>
               <a class="hotel-item-link-heading" href="#">
-                <h3 class="hotel-card-title">GreenTree Inn</h3>
+                <h2 class="hotel-card-title">GreenTree Inn</h2>
               </a>
               <p class="hotel-price-name">Гостиница</p>
               <p class="hotel-price-value">От 1500 ₽</p>
@@ -359,9 +363,10 @@
           </a>
         </li>
       </ul>
-      <section class="phones">
+      <div class="phones">
+        <h2 class="visually-hidden">Телефон</h2>
         <a class="page-phone" href="tel:+78128121212" aria-label="Телефон 7 812 812 12 12">+7 (812) 812-12-12</a>
-      </section>
+      </div>
       <a class="logo-academy" href="https://htmlacademy.ru/" aria-label="HTML Academy">
         <svg width="115" height="34" viewBox="0 0 115 34" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="currentColor" />
