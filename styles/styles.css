@@ -79,7 +79,7 @@ body {
 
 .button-brown {
   align-self: center;
-  /* min-width: 160px; */
+  min-width: 160px;
   padding: 8px 34px;
   background-color: #756157;
 }
@@ -1141,15 +1141,6 @@ body {
   text-decoration: none;
 }
 
-.hotel-card-link:hover img {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавление тени вокруг изображения */
-}
-
-.hotel-card-title:hover {
-  color: #756157; /* Изменение цвета заголовка при наведении */
-}
-
-
 .hotel-card-image {
   display: block;
   width: 100%;
@@ -1429,10 +1420,6 @@ body {
 }
 
 .modal-container-closed {
-  display: none;
-}
-
-.modal-container {
   display: none;
 }
 
