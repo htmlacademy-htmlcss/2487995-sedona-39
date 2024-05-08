@@ -73,21 +73,15 @@ body {
   outline: none;
 }
 
+.button:focus {
+  outline: 3px solid #68a2ca; /* рамка при фокусе */
+}
+
 .button-brown {
   align-self: center;
   min-width: 160px;
   padding: 8px 34px;
-  /* font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 16px; */
-  /* font-weight: 700;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase; */
   background-color: #756157;
-  /* border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none; */
 }
 
 .button-brown:hover {
@@ -134,18 +128,18 @@ body {
 }
 
 .button-gray {
-  color: rgba(51, 51, 51, 1);
-  background-color: rgba(242, 242, 242, 1);
+  color: #333333;
+  background-color: #f2f2f2;
 }
 
 .button-clear {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .button-active {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(125, 181, 79, 1);
+  color: #ffffff;
+  background-color: #7db54f;
 }
 
 .button-big {
@@ -196,11 +190,12 @@ body {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
-  transition: all 0.5s;
+  transition: color 0.5s ease;
 }
 
+
 .navigation-link:not(.navigation-link--current):hover {
-  color: #68A2CA;
+  color: #68a2ca;
   transition: all 0.5s;
 }
 
@@ -332,6 +327,7 @@ body {
   text-transform: uppercase;
   margin: 0;
   position: relative;
+  color: #000000;
 }
 
 .advantages-title::after {
@@ -399,6 +395,7 @@ body {
   line-height: 21px;
   color: #333333;
   text-transform: none;
+  overflow-wrap: break-word;
 }
 
 .advantages-item__inner {
@@ -438,19 +435,8 @@ body {
 
 .advantages-image {
   background-color: #82b3d3;
+  height: auto;
 }
-
-/* .advantages-title::after {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  content: "";
-  width: 60px;
-  height: 2px;
-  transform: translateX(-50%);
-  background-color: currentColor;
-  opacity: 0.3;
-} */
 
 /* Блок: Удобства */
 
@@ -468,8 +454,6 @@ body {
   text-transform: uppercase;
   margin: 0;
   position: relative;
-  /* padding: 30px;
-  margin-top: 75px; */
 }
 
 .conveniences-description {
@@ -489,11 +473,6 @@ body {
   margin: 0;
   list-style-type: none;
 }
-
-/* .conveniences-item {
-  width: 1200x;
-  text-align: center;
-} */
 
 .conveniences-main-text {
   margin: 0 0 20px;
@@ -517,7 +496,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-top: 180px;
+  padding-top: 190px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -525,6 +504,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   flex-basis: 400px;
+  box-sizing: border-box;
 }
 
 .conveniences-item-cube {
@@ -555,8 +535,6 @@ body {
 
 /* Блок: поиск гостиницы */
 .hotels-search {
-  /* display: flex;
-  flex-direction: column; */
   padding: 96px 0;
   text-align: center;
 }
@@ -596,7 +574,6 @@ body {
 
 /* Блок: подписка */
 .subscription {
-  /* padding: 96px 258px 105px; */
   color: #ffffff;
   background-color: #68a3ca;
   background-image: url("../images/subscribe-background.jpg");
@@ -650,8 +627,11 @@ body {
   border: none;
   outline: none;
   border-radius: 4px 0 0 4px;
-  /* opacity: 0.6; */
   min-width: 452px;
+}
+
+.email-field:hover {
+  background-color: #e6e6e6;
 }
 
 .button-blue {
@@ -694,7 +674,6 @@ body {
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
-  /* text-transform: uppercase; */
 }
 
 .filter-breadcrumbs {
@@ -726,19 +705,6 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-
-/* .filter-breadcrumbs-link:hover {
-  color: rgba(255, 255, 255, 0.6);
-} */
-
-/* .filter-breadcrumbs-link:active {
-  color: rgba(255, 255, 255, 0.3);
-} */
-
-/* .filter-breadcrumbs-link:focus {
-  color: rgba(255, 255, 255, 0.8);
-} */
-
 
 .marker {
   width: 20px;
@@ -833,12 +799,6 @@ body {
   grid-row: 1/-1;
 }
 
-/* .filter-group {
-  justify-self: start;
-  margin: 0;
-  padding: 0;
-  border: none;
-} */
 
 .range-price--borders {
   position: absolute;
@@ -942,8 +902,6 @@ body {
   /* align-self: center; */
   padding: 56px 0 0;
   row-gap: 32px;
-  /* grid-column: -2/-1;
-  grid-row: 1/-1; */
 }
 
 .filter-form-button[type="submit"] {
@@ -1009,9 +967,6 @@ body {
 }
 
 /* Каталог гостиниц */
-/* .catalog-cards{
-  padding: 50px 70px 60px;
-} */
 
 .catalog-cards {
   padding: 50px 70px 60px;
@@ -1023,13 +978,7 @@ body {
   margin: 0 0 40px;
   gap: 70px;
   width: 1060px;
-  /* height: 49px; */
 }
-
-/* .sorting-container .menu-view-item {
-  width: 56px;
-  height: 44px;
-} */
 
 .search-result-text {
   flex-grow: 1;
@@ -1055,10 +1004,13 @@ body {
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: 94% center;
+  background-color: rgba(29, 29, 29, 0);
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   appearance: none;
   outline: none;
+  -moz-appearance: none;
+  opacity: 1;
 }
 
 .select-control:hover,
@@ -1092,17 +1044,11 @@ body {
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-  /* Установка прозрачного фона */
   color: inherit;
-  /* Наследование цвета текста */
   padding: 0;
-  /* Удаление стандартных отступов */
   cursor: pointer;
-  /* Добавление указателя в виде руки для интерактивности */
   font: inherit;
-  /* Наследование шрифта от родительского элемента */
   text-align: center;
-  /* Центрирование текста */
 }
 
 .menu-view-link:hover {
@@ -1135,7 +1081,6 @@ body {
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* align-items: start; */
   row-gap: 16px;
   column-gap: 20px;
   padding: 19px;
@@ -1803,7 +1748,7 @@ body {
   content: "";
   background-color: inherit;
   background-image: url("../images/calendar.svg");
-  width: 20px;
+  width: 22px;
   height: 20px;
   top: 50%;
   right: 20px;
@@ -1831,4 +1776,29 @@ body {
 .check-in-date-input:disabled ~ :is(.check-in-date-control, .check-in-date-text),
 .check-out-date-input:disabled ~ :is(.check-out-date-control, .check-out-date-text) {
   opacity: 0.3;
+}
+
+/* Эксперементы / доработки */
+
+/* РАБОТАЮТ */
+
+.email-field, .range-price-input, .modal-control-input {
+  /* border: 1px solid #ccc; */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* плавный переход цвета и тени */
+}
+
+.email-field:focus, .range-price-input:focus, .modal-control-input:focus {
+  border-color: #82b3d3; /* синяя рамка при фокусе */
+  outline: none; /* убираем стандартный outline */
+  box-shadow: 0 0 0 3px rgba(130, 179, 211, 0.5); /* добавляем тень для лучшей видимости */
+}
+
+.email-field:focus + label, .range-price-input:focus + label, .modal-control-input:focus + label {
+  color: #68a2ca; /* изменение цвета метки при фокусе на связанном поле */
+}
+
+.no-list-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
