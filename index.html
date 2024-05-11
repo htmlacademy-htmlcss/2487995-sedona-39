@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   </head>
 
-  <body>
+  <body class="page-main">
     <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo-link" href="index.html">
@@ -51,10 +51,11 @@
           </li>
         </ul>
       </nav>
-      <button class="button button-brown" type="button">Хочу сюда!</button>
+      <a class="button button-brown" href="/modal.html">Хочу сюда!</a>
     </header>
 
     <main class="main-container main-index" data-test="main">
+      <h1 class="visually-hidden">Седона город мечты</h1>
       <section class="hero" data-test="hero">
         <h2 class="visually-hidden">Приветственный раздел</h2>
         <img class="hero-img" src="images/welcome-to-sedona.svg" width="458" height="352"
@@ -149,7 +150,7 @@
     </main>
     <!-- Футер -->
     <footer class="main-footer" data-test="footer">
-      <ul class="page-footer-container no-list-style">
+      <ul class="social-list">
         <li class="social-list">
           <a class="social-link" href="https://vk.com/htmlacademy" aria-label="Группа ВКонтакте.">
             <svg aria-hidden="true" focusable="false" width="25" height="15" viewBox="0 0 25 15" fill="currentColor"
@@ -227,7 +228,7 @@
 
     <!-- Модельное окно -->
 
-    <section class="modal-container">
+    <section class="modal-container modal-container-closed">
       <div class="modal">
         <h2 class="modal-heading">Поиск гостиницы в Седоне</h2>
         <button class="modal-button-close" type="button" aria-label="Закртыть окно поиска гостиницы.">
