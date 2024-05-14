@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body class="page-main">
@@ -56,6 +56,7 @@
 
     <main class="main-container main-index" data-test="main">
       <h1 class="visually-hidden">Седона город мечты</h1>
+      <div class="page-container">
       <section class="hero" data-test="hero">
         <h2 class="visually-hidden">Приветственный раздел</h2>
         <img class="hero-img" src="images/welcome-to-sedona.svg" width="458" height="352"
@@ -135,6 +136,7 @@
           и мы покажем вам лучшие предложения гостиниц в Седоне </p>
         <button class="button button-brown button-big" type="button">Поиск гостиницы в Седоне</button>
       </section>
+
       <!-- Блок подписки -->
       <section class="subscription" data-test="subscribe">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
@@ -143,11 +145,12 @@
         <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="user-email" class="visually-hidden">Ваш e-mail</label>
           <input class="email-field" type="email" name="user-email" id="user-email" placeholder="Ваш e-mail" required>
-          <button class="button button-blue button-big" type="submit">Подписаться</button>
+          <button class="button button-blue button_blok" type="submit">Подписаться</button>
         </form>
       </section>
-
+      </div>
     </main>
+
     <!-- Футер -->
     <footer class="main-footer" data-test="footer">
       <ul class="social-list">

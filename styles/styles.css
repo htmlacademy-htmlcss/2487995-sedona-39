@@ -579,6 +579,22 @@ html {
   width: 376px;
 }
 
+/* подписаться */
+.button_blok {
+  align-self: center;
+  padding: 8px 50px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
 /* Блок: подписка */
 .subscription {
   color: #ffffff;
@@ -587,12 +603,11 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  min-height: 414px;
+  min-height: 415px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .subscription-catalog {
@@ -601,7 +616,7 @@ html {
 }
 
 .subscription-title {
-  margin: 0 0 20px;
+  margin: -3px 0 22px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
