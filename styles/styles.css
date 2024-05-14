@@ -31,17 +31,11 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-}
-
 html {
   height: 100%;
-  margin: 0 auto;
-  background-color: #f2f2f2;
 }
 
-body {
+.page-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -79,7 +73,6 @@ body {
 
 .button-brown {
   align-self: center;
-  min-width: 160px;
   padding: 8px 34px;
   background-color: #756157;
 }
@@ -103,10 +96,23 @@ body {
 }
 
 .button-blue {
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(130, 179, 211, 1);
+  padding: 8px 50px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  background: #82b3d3;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-blue {
   width: 232px;
-  height: 52px;
+  min-height: 52px;
 }
 
 .button-blue:hover {
@@ -237,7 +243,7 @@ body {
 }
 
 .menu-link:hover {
-  color: #68A2CA;
+  color: #68a2ca;
   transition: all 0.5s;
 }
 
@@ -275,8 +281,6 @@ body {
   background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 0 center, center center;
-  /* background-size: contain, cover; */
-
 }
 
 .background-image-container {
@@ -422,7 +426,6 @@ body {
 .blue {
   color: rgba(255, 255, 255, 1);
   min-width: 100%;
-  /* background-color: rgba(130, 179, 211, 1); */
 }
 
 .gray {
@@ -436,6 +439,7 @@ body {
 .advantages-image {
   background-color: #82b3d3;
   height: auto;
+  object-fit: cover;
 }
 
 /* Блок: Удобства */
@@ -454,6 +458,7 @@ body {
   text-transform: uppercase;
   margin: 0;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .conveniences-description {
@@ -464,6 +469,7 @@ body {
   color: #333333;
   text-transform: none;
   padding-top: 30px;
+  padding: 0 10px 10px 10px;
 }
 
 .conveniences-container {
@@ -496,7 +502,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-top: 190px;
+  padding-top: 183px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -535,12 +541,12 @@ body {
 
 /* Блок: поиск гостиницы */
 .hotels-search {
-  padding: 96px 0;
+  padding: 93px 0;
   text-align: center;
 }
 
 .hotels-search-title {
-  margin: 0 0 20px;
+  margin: 0 0 21px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -548,7 +554,7 @@ body {
 }
 
 .hotels-search-text {
-  margin: 0 0 54px;
+  margin: 0 0 55px;
   font-size: 22px;
   font-weight: 400;
   line-height: 26px;
@@ -565,8 +571,23 @@ body {
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
-  background-color: #756157;
-  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 376px;
+}
+
+/* подписаться */
+.button_blok {
+  align-self: center;
+  padding: 8px 50px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
   border: none;
   cursor: pointer;
   outline: none;
@@ -580,21 +601,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  min-height: 414px;
+  min-height: 415px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .subscription-catalog {
   text-align: center;
-  padding: 96px 258px 104px;
+  padding: 94px 258px 104px;
 }
 
 .subscription-title {
-  margin: 0 0 20px;
+  margin: -3px 0 22px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -632,21 +652,6 @@ body {
 
 .email-field:hover {
   background-color: #e6e6e6;
-}
-
-.button-blue {
-  padding: 8px 50px;
-  font-family: "PT Sans", "Arial", sans-serif;
-  background: #82b3d3;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-  color: #ffffff;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  outline: none;
 }
 
 /* Блок: подписка в каталоге */
@@ -727,7 +732,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  /* color: #ffffff; */
   text-transform: capitalize;
 }
 
@@ -803,10 +807,9 @@ body {
 .range-price--borders {
   position: absolute;
   z-index: 1;
-  /* font-weight: 700; */
   color: black;
   opacity: 0.3;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -832,7 +835,13 @@ body {
   border: none;
   outline: none;
   appearance: none;
+  font-family: "PT Sans", "Arial", sans-serif;
   -moz-appearance: textfield;
+}
+
+.range-price-input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .range-price-input::-webkit-inner-spin-button,
@@ -899,7 +908,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-self: end;
-  /* align-self: center; */
   padding: 56px 0 0;
   row-gap: 32px;
 }
@@ -975,7 +983,7 @@ body {
 .sorting-container {
   display: flex;
   align-items: center;
-  margin: 0 0 40px;
+  margin: -3px 0 38px;
   gap: 70px;
   width: 1060px;
 }
@@ -994,23 +1002,27 @@ body {
 .select-control {
   padding: 14px 20px;
   margin: 0 0 0 auto;
-  width: 292px;
+  width: 294px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 18px;
   color: #333333;
   text-align: left;
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: 94% center;
-  background-color: rgba(29, 29, 29, 0);
+  background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   appearance: none;
   outline: none;
   -moz-appearance: none;
   opacity: 1;
+}
+
+.select.select-control option {
+background: #ffffff;
 }
 
 .select-control:hover,
@@ -1026,9 +1038,9 @@ body {
 
 .menu-view-list {
   display: flex;
-  gap: 8px;
+  gap: 9px;
   padding: 0;
-  margin: 0;
+  margin: 5px;
   list-style-type: none;
   flex-basis: 150px;
   flex-wrap: wrap;
@@ -1071,7 +1083,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  /* margin: 70px 40px; */
   padding: 0 0 38px;
   list-style-type: none;
   border-bottom: 1px solid #e6e6e6;
@@ -1086,6 +1097,7 @@ body {
   padding: 19px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
+  align-content: flex-start;
 }
 
 .star {
@@ -1181,6 +1193,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  align-self: center;
 }
 
 .hotel-item-button:hover,
@@ -1245,6 +1258,11 @@ body {
   list-style-type: none;
 }
 
+section .pagination {
+  margin-top: 42px;
+}
+
+
 .pagination-link {
   display: flex;
   justify-content: center;
@@ -1283,8 +1301,6 @@ body {
   color: #000000;
   background-color: #f2f2f2;
   pointer-events: none;
-  /* color: rgba(0, 0, 0, 1);
-  background-color: rgba(242, 242, 242, 1); */
 }
 
 .pagination-link-dots {
@@ -1307,8 +1323,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 47px;
-  height: 40px;
+  width: 44px;
+  height: 48px;
   color: #83b3d3;
   outline: none;
 }
@@ -1330,15 +1346,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 70px 30px;
-}
-
-.page-footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style-type: none;
-  gap: 5px;
+  padding: 45px 70px 30px 70px;
 }
 
 .button-social {
@@ -1757,13 +1765,13 @@ body {
 
 .check-in-date-input:hover,
 .check-out-date-input:hover {
-  background: #E6E6E6;
+  background: #e6e6e6;
   cursor: pointer;
 }
 
 .check-in-date-input:focus-visible,
 .check-out-date-input:focus-visible {
-  background: #E6E6E6;
+  background: #e6e6e6;
   outline: 3px solid #82b3d3;
 }
 
@@ -1783,7 +1791,6 @@ body {
 /* РАБОТАЮТ */
 
 .email-field, .range-price-input, .modal-control-input {
-  /* border: 1px solid #ccc; */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* плавный переход цвета и тени */
 }
 
@@ -1797,8 +1804,12 @@ body {
   color: #68a2ca; /* изменение цвета метки при фокусе на связанном поле */
 }
 
-.no-list-style {
+.social-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 151px;
 }
