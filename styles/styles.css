@@ -1789,13 +1789,13 @@ section .pagination {
 
 .check-in-date-input:hover,
 .check-out-date-input:hover {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
   cursor: pointer;
 }
 
 .check-in-date-input:focus-visible,
 .check-out-date-input:focus-visible {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
   outline: 3px solid #82b3d3;
 }
 
