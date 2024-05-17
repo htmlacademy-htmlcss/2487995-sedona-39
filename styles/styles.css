@@ -68,7 +68,8 @@ html {
 }
 
 .button:focus {
-  outline: 3px solid #68a2ca; /* рамка при фокусе */
+  outline: 3px solid #68a2ca;
+  /* рамка при фокусе */
 }
 
 .button-brown {
@@ -354,7 +355,7 @@ html {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
   flex-basis: 400px;
@@ -424,7 +425,7 @@ html {
 
 /* Раскраска блоков */
 .blue {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
   min-width: 100%;
 }
 
@@ -469,7 +470,7 @@ html {
   color: #333333;
   text-transform: none;
   padding-top: 30px;
-  padding: 0 10px 10px 10px;
+  padding: 0 85px 80px 85px;
 }
 
 .conveniences-container {
@@ -506,7 +507,7 @@ html {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
   flex-basis: 400px;
@@ -659,7 +660,7 @@ html {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -1022,7 +1023,7 @@ html {
 }
 
 .select.select-control option {
-background: #ffffff;
+  background: #ffffff;
 }
 
 .select-control:hover,
@@ -1152,6 +1153,17 @@ background: #ffffff;
   justify-self: center;
   text-decoration: none;
 }
+
+.hotel-card-link:hover img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Добавление тени вокруг изображения */
+}
+
+.hotel-card-title:hover {
+  color: #756157;
+  /* Изменение цвета заголовка при наведении */
+}
+
 
 .hotel-card-image {
   display: block;
@@ -1305,15 +1317,15 @@ section .pagination {
 
 .pagination-link-dots {
   pointer-events: none;
-  color: rgba(0, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* Footer*/
 .phone {
   font-size: 40px;
   line-height: 40px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -1568,7 +1580,7 @@ section .pagination {
   left: 50%;
   display: none;
   width: 256px;
-  padding: 18px;
+  padding: 22px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1763,6 +1775,18 @@ section .pagination {
   transform: translateY(-50%);
 }
 
+.date-input {
+  position: relative;
+  grid-column: 2 / 5;
+  align-self: center;
+  width: 440px;
+  margin-bottom: 4px;
+  padding-right: 60px;
+  background-image: url("../images/calendar.svg"); /* Путь к вашей иконке календаря */
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
 .check-in-date-input:hover,
 .check-out-date-input:hover {
   background: #e6e6e6;
@@ -1790,18 +1814,29 @@ section .pagination {
 
 /* РАБОТАЮТ */
 
-.email-field, .range-price-input, .modal-control-input {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* плавный переход цвета и тени */
+.email-field,
+.range-price-input,
+.modal-control-input {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* плавный переход цвета и тени */
 }
 
-.email-field:focus, .range-price-input:focus, .modal-control-input:focus {
-  border-color: #82b3d3; /* синяя рамка при фокусе */
-  outline: none; /* убираем стандартный outline */
-  box-shadow: 0 0 0 3px rgba(130, 179, 211, 0.5); /* добавляем тень для лучшей видимости */
+.email-field:focus,
+.range-price-input:focus,
+.modal-control-input:focus {
+  border-color: #82b3d3;
+  /* синяя рамка при фокусе */
+  outline: none;
+  /* убираем стандартный outline */
+  box-shadow: 0 0 0 3px rgba(130, 179, 211, 0.5);
+  /* добавляем тень для лучшей видимости */
 }
 
-.email-field:focus + label, .range-price-input:focus + label, .modal-control-input:focus + label {
-  color: #68a2ca; /* изменение цвета метки при фокусе на связанном поле */
+.email-field:focus + label,
+.range-price-input:focus + label,
+.modal-control-input:focus + label {
+  color: #68a2ca;
+  /* изменение цвета метки при фокусе на связанном поле */
 }
 
 .social-list {
