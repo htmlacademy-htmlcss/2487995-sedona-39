@@ -211,15 +211,17 @@
       </svg>
     </button>
 
-    <form class="modal-form" method="get">
-      <input class="check-in-date-input" type="date" name="check-in-date" id="check-in-date" value="2023-04-27"
-        aria-label="Укажите дату заезда.">
-      <label class="check-in-date-control" for="check-in-date">Дата заезда:</label>
-      <p class="check-in-date-text">Мы не можем отправить вас в прошлое.</p>
-      <input class="check-out-date-input" type="date" name="check-out-date" id="check-out-date" value="2024-05-01"
+      <form class="modal-form" method="get">
+        <input class="check-in-date-input date-input" type="text" name="check-in-date" id="check-in-date" value="27 апреля 2020"
+        aria-label="Укажите дату заезда." required>
+        <label class="check-in-date-control" for="check-in-date">Дата заезда:</label>
+        <p class="check-in-date-text">Мы не можем отправить вас в прошлое.</p>
+        <input class="check-out-date-input date-input" type="text" name="check-out-date" id="check-out-date" value="1 сентября 2023"
         aria-label="Укажите дату выезда.">
-      <label class="check-out-date-control" for="check-out-date">Дата выезда:</label>
-      <p class="check-out-date-text">На эти даты есть свободные номера. Пока есть.</p>
+        <label class="check-out-date-control" for="check-out-date">Дата выезда:</label>
+        <p class="check-out-date-text">На эти даты есть свободные номера. Пока есть.</p>
+
+
       <label class="adults-control" for="adults">Взрослые:</label>
       <div class="adults-control-wrapper">
         <button class="modal-control-button" type="button" aria-label="Уменьшить количество взрослых.">
